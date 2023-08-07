@@ -17,6 +17,7 @@
 		21B0C2492A7912AA0070E3F4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0C2482A7912AA0070E3F4 /* SearchViewController.swift */; };
 		21B0C24B2A7912C80070E3F4 /* DownLoadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0C24A2A7912C80070E3F4 /* DownLoadsViewController.swift */; };
 		21B0C2712A7EBA440070E3F4 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0C2702A7EBA440070E3F4 /* CollectionViewTableViewCell.swift */; };
+		21B0C2932A80A6750070E3F4 /* HeroHeaderUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0C2922A80A6750070E3F4 /* HeroHeaderUiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		21B0C2482A7912AA0070E3F4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		21B0C24A2A7912C80070E3F4 /* DownLoadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadsViewController.swift; sourceTree = "<group>"; };
 		21B0C2702A7EBA440070E3F4 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		21B0C2922A80A6750070E3F4 /* HeroHeaderUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				21B0C2702A7EBA440070E3F4 /* CollectionViewTableViewCell.swift */,
+				21B0C2922A80A6750070E3F4 /* HeroHeaderUiView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				21B0C2712A7EBA440070E3F4 /* CollectionViewTableViewCell.swift in Sources */,
 				21B0C2472A7912580070E3F4 /* UpComingViewController.swift in Sources */,
 				21B0C2302A790D970070E3F4 /* AppDelegate.swift in Sources */,
+				21B0C2932A80A6750070E3F4 /* HeroHeaderUiView.swift in Sources */,
 				21B0C24B2A7912C80070E3F4 /* DownLoadsViewController.swift in Sources */,
 				21B0C2322A790D970070E3F4 /* SceneDelegate.swift in Sources */,
 				21B0C2452A7912340070E3F4 /* HomeViewController.swift in Sources */,

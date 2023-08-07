@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
         // 이렇게 초기화 하면 상단에 헤더를 둘 수 있음.
         let table = UITableView(frame: .zero, style: .grouped)
         // 테이블 뷰를 생성하고, UITableViewCell 클래스를 등록(register)하며, 등록된 식별자(identifier)를 "cell"로 지정
-        table.register(UITableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return table
     }()
 
@@ -32,8 +32,11 @@ class HomeViewController: UIViewController {
         view.addSubview(homeFeedTable)
         // 현재 ViewController가 테이블 뷰의 델리게이트 역할을 수행한다는 것
         homeFeedTable.delegate = self
-        
         homeFeedTable.dataSource = self
+        
+        // 만들어둔 HeroHeaderUiVIew 연결하기
+        let headerView = HeroHeaderUiView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        homeFeedTable.tableHeaderView = headerView
     }
 
     override func viewDidLayoutSubviews() {
