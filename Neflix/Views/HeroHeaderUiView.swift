@@ -9,6 +9,7 @@ import UIKit
 
 class HeroHeaderUiView: UIView {
     
+    
     private let heroImageView: UIImageView = {
         let imageView = UIImageView()
         // 이미지가 이미지 뷰에 꽉 차도록 확장, 비율은 유지되며, 이미지가 이미지 뷰의 영역을 벗어날 수 있음
