@@ -8,7 +8,23 @@
 import UIKit
 
 class HeroHeaderUiView: UIView {
+    private let downloadButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Download", for: .normal)
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 1
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
+    private let playButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Play", for: .normal)
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 1
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     private let heroImageView: UIImageView = {
         let imageView = UIImageView()
@@ -19,7 +35,7 @@ class HeroHeaderUiView: UIView {
         imageView.image = UIImage(named: "movie1")
         return imageView
     }()
-    
+    // 이미지에 그림자 색 주기
     private func addGradient(){
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
@@ -27,7 +43,7 @@ class HeroHeaderUiView: UIView {
             UIColor.clear,
             UIColor.systemBackground.cgColor
         ]
-//        layer.addSublayer(layer: CALayer)
+        gradientLayer.frame = bounds
         layer.addSublayer(gradientLayer)
     }
     
@@ -35,8 +51,27 @@ class HeroHeaderUiView: UIView {
         super.init(frame: frame)
         addSubview(heroImageView)
         addGradient()
+        addSubview(playButton)
+        addSubview(downloadButton)
+        applyConstraints()
     }
     
+    private func applyConstraints(){
+        let playButtonConstraints = [
+            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 80),
+            // playbutton이 위쪽에 위치하기 원하므로 음수를 준다.
+            playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            playButton.widthAnchor.constraint(equalToConstant: 100)
+        ]
+        let downloadButtonConstraints = [
+            downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -80),
+            downloadButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            downloadButton.widthAnchor.constraint(equalToConstant: 100)
+        ]
+        NSLayoutConstraint.activate(playButtonConstraints)
+        NSLayoutConstraint.activate(downloadButtonConstraints)
+        
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
         heroImageView.frame = bounds
